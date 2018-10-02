@@ -8,7 +8,7 @@
 =======================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Índice
 
    tema1/index.rst
