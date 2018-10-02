@@ -1,10 +1,10 @@
-.. Apuntes de Diseño Sw documentation master file, created by
+.. Apuntes de Disenho Sw documentation master file, created by
    sphinx-quickstart on Tue Oct  2 21:09:15 2018.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
 =======================
- Apuntes de Diseño Sw
+ Apuntes de Disenho Sw
 =======================
 
 .. toctree::
