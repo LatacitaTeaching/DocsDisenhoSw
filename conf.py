@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Apuntes de Diseño Sw'
+project = 'Apuntes de Disenho Sw'
 copyright = '2018, Pablo Sánchez'
 author = 'Pablo Sánchez'
 
