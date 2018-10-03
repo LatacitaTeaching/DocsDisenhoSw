@@ -19,9 +19,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Apuntes de Disenho Sw'
-copyright = '2018, Pablo Sánchez'
-author = 'Pablo Sánchez'
+project = u'Apuntes de Diseño Sw'
+copyright = u'2018, Pablo Sánchez'
+author = u'Pablo Sánchez'
 
 # The short X.Y version
 version = '0.1'
@@ -103,7 +103,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'ApuntesdeDiseoSwdoc'
+htmlhelp_basename = 'ApuntesdeDisenhoSwdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -130,8 +130,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'ApuntesdeDiseoSw.tex', 'Apuntes de Diseño Sw Documentation',
-     'Pablo Sánchez', 'manual'),
+    (master_doc, 'ApuntesdeDisenhoSw.tex', 'Apuntes de Disenho Sw Documentation',
+     'Pablo Sanchez', 'manual'),
 ]
 
 
@@ -140,7 +140,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'apuntesdediseosw', 'Apuntes de Diseño Sw Documentation',
+    (master_doc, 'apuntesdedisenhosw', 'Apuntes de Disenho Sw Documentation',
      [author], 1)
 ]
 
@@ -151,8 +151,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'ApuntesdeDiseoSw', 'Apuntes de Diseño Sw Documentation',
-     author, 'ApuntesdeDiseoSw', 'One line description of project.',
+    (master_doc, 'ApuntesdeDisenhoSw', 'Apuntes de Disenho Sw Documentation',
+     author, 'ApuntesdeDisenhoSw', 'One line description of project.',
      'Miscellaneous'),
 ]
 
