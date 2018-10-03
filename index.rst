@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 =======================
- Apuntes de Disenho Sw
+ Apuntes de Diseño Sw
 =======================
 
 .. toctree::
