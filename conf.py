@@ -103,7 +103,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'ApuntesdeDisenhoSwdoc'
+htmlhelp_basename = u'docsDiseñoSw'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -130,8 +130,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'ApuntesdeDisenhoSw.tex', 'Apuntes de Disenho Sw Documentation',
-     'Pablo Sanchez', 'manual'),
+    (master_doc, u'ApuntesdeDiseñoSw.tex', u'Apuntes de Diseño Sw',
+     u'Pablo Sánchez', 'manual'),
 ]
 
 
@@ -140,7 +140,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'apuntesdedisenhosw', 'Apuntes de Disenho Sw Documentation',
+    (master_doc, u'apuntesdediseñosw', u'Apuntes de Diseño Sw',
      [author], 1)
 ]
 
@@ -151,8 +151,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'ApuntesdeDisenhoSw', 'Apuntes de Disenho Sw Documentation',
-     author, 'ApuntesdeDisenhoSw', 'One line description of project.',
+    (master_doc, u'ApuntesdeDiseñoSw', 'Apuntes de Diseño Sw',
+     author, 'ApuntesdeDiseñoSw', 'One line description of project.',
      'Miscellaneous'),
 ]
 
