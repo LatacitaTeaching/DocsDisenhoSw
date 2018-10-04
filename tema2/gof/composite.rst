@@ -4,8 +4,7 @@ Patrón Composite
 Problema a resolver
 ---------------------
 
-TODO: Añadir descripción.
-
+.. todo:: Completar con ejemplo. Utilizar programa de dibujo o tablero de juego.
 
 .. admonition:: Problema
 
@@ -20,15 +19,17 @@ Solución
 Ejemplo Concreto
 *****************
 
-TODO
+.. todo:: Completar una vez que esté listo el ejemplo concreto.
 
 Solución Abstracta
 *******************
 
-TODO
+.. todo:: Completar
 
 Ventajas e Incovenientes
 -------------------------
+
+.. todo:: Completar (OPC, Polimorfismo)
 
 Receta para aplicar el patrón
 --------------------------------
