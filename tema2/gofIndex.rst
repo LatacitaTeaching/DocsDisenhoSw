@@ -7,3 +7,4 @@
     :titlesonly:
 
     gof/composite
+    gof/visitor
