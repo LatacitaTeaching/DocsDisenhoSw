@@ -15,3 +15,5 @@
    tema2/index.rst
    tema3/index.rst
    tema4/index.rst
+   lab/index.rst
+   terms/index.rst
