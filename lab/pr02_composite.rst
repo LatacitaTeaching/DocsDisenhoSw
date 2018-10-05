@@ -1,9 +1,11 @@
 =================================
   Práctica 02 - Patrón Composite
 =================================
-------------------------------------------
- La parte contratante de la primera parte
-------------------------------------------
+-------------------------------------------------
+ La parte contratante de la primera parte [#f0]_
+-------------------------------------------------
+
+.. [#f0] En homenaje a la famosa `escena <https://youtu.be/4XEp-mZ2bG4>`_ de la película de los hermanos Marx *Una Noche en la Ópera* (Sam Wood, 1935).
 
 Introducción
 =============
@@ -41,20 +43,16 @@ Sistema de Archivos Sparrow
 
 Dentro de un proyecto de mayor envergadura, denominado *Captain Sparrow*, se necesita implementar un sistema de archivos que contenga los siguientes elementos:
 
-**Archivos**:
-
+Archivos:
   Constituyen los elementos básicos del sistema de archivos. Se corresponden con documentos, fotografías o cualquier otro elemento que se deseen almacenar en el sistema. Cada archivo tiene un nombre y un tamaño en kilobytes. El sistema no distinguirá entre diferentes tipos de arhivos en función de su contenido.
 
-**Directorios**:
-
+Directorios:
   Son contenedores de archivos u otros elementos que se puedan alojar el sistema de archivos Sparrow. Sirven para organizar y estructurar el sistema de manera que resulte más fácil localizar la información conforme al criterio que establezca cada usuario. Cada directorio tiene un nombre y su definición consume 1 Kb de almacenamiento en el sistema. Merece la pena destacar que un directorio puede contener a su vez más directorios dentro.
 
-**Archivos Comprimidos**:
-
+Archivos Comprimidos:
   Son archivos especiales que almacenan en su interior elementos del sistema de archivos de manera comprimida. Cada archivo comprimido, al igual que los archivos normales, tiene un nombre. El sistema de compresión utilizado en el sistema Sparrow asegura que el tamaño del archivo comprimido sea siempre un 30% del tamaño total de los elementos que contiene, más 1Kb por la definición del archivo en sí.
 
-**Enlaces Directos**:
-
+Enlaces Directos:
   Son elementos que dirigen al usuario de forma directa a otro elemento del sistema de archivos. El elemento al cual dirige un enlace lo denominaremos elemento destino. El elemento destino de un acceso directo puede ser cualquier elemento del sistema de archivos, menos otro acceso directo. Un acceso directo no tendrá nombre propio y utilizará como nombre el nombre de su elemento destino. Si se renombra un enlace, deberá renombrarse también su elemento destino. Cada enlace directo ocupa en el sistema 1 Kb de espacio de almacenamiento.
  
 Cada elemento del sistema de archivos Sparrow debe permitir obtener de manera cómoda los siguientes datos:
@@ -91,20 +89,52 @@ Criterios de Evaluación
 
 Para verificar que el patrón `Composite <../tema2/gof/composite.html>`_ ha sido aplicado correctamente, se aconseja verificar que:
 
-  #. Se pueden representar sistemas de archivos de diferente profundidad;
-  #. Dentro de cada nivel puede haber elementos de diferente tipo;
-  #. Desde un punto de vista externo a la jerarquía, se manipulan igual sistemas de archivos conteniendo un único elemento que sistemas de archivos conteniendo diferentes niveles.
-  #. Los métodos para manipular los distintos elementos dentro la jerarquía son homogéneos para los diferentes elementos del sistema de archivos *Sparrow*, no distinguiéndose entre diferentes tipos de elementos.
-  #. La implementación de la jerarquía está libre de castings.
+  #. Se pueden crear sistemas de archivos de cualquier profundidad.
+  #. Dentro de cada nivel puede haber elementos de diferente tipo.
+  #. Desde un punto de vista externo a la jerarquía, para ciertas operaciones, se manipulan igual sistemas de archivos multinivel que ficheros simples.
+  #. Los métodos para manipular los distintos elementos dentro la jerarquía tratan de manera homogénea a los diferentes elementos del sistema de archivos *Sparrow*, no haciendo distinciones entre los elementos en función de su tipo. Si este punto se cumple, los métodos que calculan el número de archivos y el tamaño de cada elementos deberían estar libres de *castings*.
+  #. Se puede añadir un nuevo elemento al sistema Sparrow, como ``archivo encriptado``, sin tener que modificar ninguno de los elementos ya existentes en la jerarquía.
 
-Para comprobar parte de los puntos anteriores, se aconseja al alumno verificar que su diseño permite la creación de un sistema de archivos como el mostrado a continuación.
+Para comprobar parte de los puntos 1 y 2, se aconseja al alumno verificar que su diseño permite la creación de un sistema de archivos como el que se muestra en la Figura 1[#f4]_.
+
+.. code-block:: python
+   :caption: Figura 1. Ejemplo de Sistema de Archivos Sparrow
+
+   d Raiz
+      d Directorio Vacio
+      d Directorio Con Archivo Unico
+         f foto001.jpg
+      d Directorio Con Archivo Comprimido Simple
+         f foto002.jpg
+         e foto001.jpg
+         c ccSimple.zip
+            d Directorio Vacio En Archivo Comprimido
+            f foto003.jpg
+            e foto001.jpg
+      d Directorio con Directorio Anidado
+         f foto004.jpg
+         e ccSimple.zip
+         e Directorio Vacio
+         d Directorio con Archivo Comprimido Complejo
+            f foto005
+            f foto006
+            c ccComplejo.zip
+               c ccAnidada.zip
+                  f foto007.jpg
+               f foto008.jpg
 
 
-Dicha figura ilustra un posible árbol de directorios del sistema de archivos Sparrow. Cada elemento está precedido de una letra que indica qué tipo de elemento es: ``d`` es directorio, ``c`` es archivo comprimido, ``f`` es archivo y ``e`` es enlace directo.
+.. [#f4] La letra al lado de cada elemento  indica el tipo de elemento del cual se trata: ``d`` es directorio, ``c`` es archivo comprimido, ``f`` es archivo y ``e`` es enlace directo.
 
-.. figure:: imgs/sistemaArchivos.png
-   :align: center
+Para la comprobación del punto 3 se aconseja crear una función estática ``imprimirPropiedadesElementoSparrow`` que acepte cualquier elemento de un sistema de archivos Sparrow e imprima por pantalla su ``nombre``, ``número de archivos`` y ``tamaño``. Dicha función deberá funcionar igual con independencia del elemento que se le pase y podría tener una implementación parecida a la que se muestra en la Figura 2, donde ``e`` sería un elemento cualesquiera del sistema de archivos Sparrow.
 
-   Figura 1. Ejemplo de Sistema de Archivos Sparrow
+.. code-block:: csharp
+   :caption: Figura 2. Ejemplo de cuerpo para el método ``imprimirPropiedadesElementoSparrow``
 
-Además, se aconseja verificar que el modelo UML creado no contiene errores de sintaxis triviales, como la ausencia de nombre y multiplicidad en los extremos navegables de una asociación.
+   Console.Out.WriteLine("============= Info ===============");
+   Console.Out.WriteLine();
+   Console.Out.WriteLine("Nombre        : " + e.Nombre);
+   Console.Out.WriteLine("Tamaño        : " + e.Tamanho);
+   Console.Out.WriteLine("Num. Archivos : " + e.NumArchivos);
+
+Por último, se aconseja verificar que el modelo UML creado no contiene errores de sintaxis triviales, como la ausencia de nombre y multiplicidad en los extremos navegables de una asociación.
