@@ -34,3 +34,85 @@ Los objetivos concretos de esta práctica son:
   #. Ser capaz de utilizar el *patrón Visitor* para visitar un elemento cualesquiera de una jerarquía de clases.
 
 Para alcanzar dichos objetivos, el alumno deberá aplicar el *patrón Visitor* al problema que se describe a continuación.
+
+Visualización del Sistema de Archivos Sparrow
+==============================================
+
+El `Sistema de Archivos Sparrow <pr02_composite.html#sistema-de-archivos-sparrow>`_) debe permitir visualizar su estructura en forma arbórea conforme a varios formatos. Actualmente se consideran sólo dos formatos de visualización distintos, conocidos como el *formato compacto* y el *formato extendido*. No obstante, desea que pero se tiene previsto en un futuro cercano añadir más variantes, por lo que se desea que la aplicación sea facilmente extendible a este respecto.
+
+Los *formatos compacto* y *extendido* que se desean implementar comparten una serie de características comunes y una serie de diferencias. Con respecto a sus aspectos comunes, ambos fomatos deben:
+
+    * Mostrar un único elemento por línea.
+    * Mostar el nombre de cada elemento.
+    * Mostrar el contenido de los directorios debajo de cada directorio, convenientemente tabulado con respecto al nombre del directorio.
+
+Además, el en caso del *formato extendido* se deberá:
+
+    * Mostrar el contenido de los archivos comprimidos de la misma forma que los directorios.
+    * Mostrar delante del nombre una letra que especifique el tipo de elemento del que se trata, de acuerdo con la siguiente tabla.
+
+      +-------+--------------------+
+      | ``d`` | Directorio         |
+      +-------+--------------------+
+      | ``e`` | Enlace Directo     |
+      +-------+--------------------+
+      | ``c`` | Archivo Comprimido |
+      +-------+--------------------+
+      | ``f`` | Fichero Básico     |
+      +-------+--------------------+
+
+La siguiente figura muestra un ejemplo de visualización en el formato extendido.
+
+.. code-block:: python
+   :caption: Ejemplo de Sistema de Archivos Sparrow
+
+   d Raiz
+      d Directorio Vacio
+      d Directorio Con Archivo Unico
+         f foto001.jpg
+      d Directorio Con Archivo Comprimido Simple
+         f foto002.jpg
+         e foto001.jpg
+         c ccSimple.zip
+            d Directorio Vacio En Archivo Comprimido
+            f foto003.jpg
+            e foto001.jpg
+      d Directorio con Directorio Anidado
+         f foto004.jpg
+         e ccSimple.zip
+         e Directorio Vacio
+         d Directorio con Archivo Comprimido Complejo
+            f foto005
+            f foto006
+            c ccComplejo.zip
+               c ccAnidada.zip
+                  f foto007.jpg
+               f foto008.jpg
+
+Actividades
+============
+
+El alumno, para poder alcanzar los objetivos perseguidos, deberá completar las siguientes actividades:
+
+  1. Hacer que jerarquía de clases creada en la `práctica dedicada al patrón Composite <pr02_composite.html>`_ sea visitable por las funciones de impresión descritas. Para hacer que la jerarquía sea visitable, el alumno deberá crear un *visitante abstracto* y añadir a la jerarquía los *métodos para aceptar visitantes*, con su correspondiente implementación.
+
+  .. note:: Las funciones de impresión deberán serializar un sistema de archivos como una cadena de caracteres, de manera que dicha cadena se pueda imprimir en diferentes salidas, tales como un monitor o una impresora. Por tanto, las funciones de impresión o visualización deben retornar una cadena de caracteres.
+
+  2. Implementar un *visitante concreto* para el *formato compacto*, sin tener en cuenta la necesidad de tabular el contenido de los directorios.
+  3. Crear un programa de prueba que verifique el correcto funcionamiento del visitante concreto implementado.
+  4. Implementar un visitante concreto para el *formato extendido*, sin tener en cuenta la necesidad de tabular el  contenido de los directorios y archivos comprimidos.
+  5. Crear un programa de prueba que verifique el correcto funcionamiento del visitante concreto implementado.
+  6. Modificar los visitantes concretos implementados para que tengan en cuenta el requisito relativo a la tabulación de los elementos anidados.
+  7. Con los programas de prueba implementados anteriormente, verificar el correcto funcionamiento de las modificaciones realizadas para soportar las tabulaciones.
+
+Criterios de Autoevaluación
+============================
+
+Para verificar que el patrón `Visitor <../tema2/gof/visitor.html>`_ ha sido aplicado correctamente, se aconseja verificar que:
+
+  * Sólo se ha modificado la jerarquía de clases para añadir los métodos *accept*.
+  * La jerarquía de clases está libre de atributos relacionados con las funciones de impresión.
+  * Los métodos *accept* sólo delegan en los vistantes concretos.
+  * Los métodos *visit* de los visitantes concretos no invocan directamente a otros métodos *visit*, sino que delegan en los métodos *accept* que correspondan.
+  * Las implementaciones de los métodos *accept* y *visit* está libre de *castings*
+  * Se pueden añadir nuevos visitantes concretos sin modificar la jararquía de clases.

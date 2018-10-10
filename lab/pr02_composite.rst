@@ -84,8 +84,8 @@ El alumno deberá realizar las siguientes actividades para poder aplicar el patr
 
 .. [#f3] Durante la incorporación de los enlaces, recordar que las clases abstractas y las interfaces se usan frecuentemente para representar *ables*, es decir, conjuntos de clases que comparten una cierta propiedad abstracta, como la de ser *comparable*, *serializable*, *ejectuable* o *cacheable*.
 
-Criterios de Evaluación
-========================
+Criterios de Autoevaluación
+============================
 
 Para verificar que el patrón `Composite <../tema2/gof/composite.html>`_ ha sido aplicado correctamente, se aconseja verificar que:
 
