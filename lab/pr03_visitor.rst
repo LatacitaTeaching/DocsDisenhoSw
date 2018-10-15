@@ -38,7 +38,7 @@ Para alcanzar dichos objetivos, el alumno deberá aplicar el *patrón Visitor* a
 Visualización del Sistema de Archivos Sparrow
 ==============================================
 
-El `Sistema de Archivos Sparrow <pr02_composite.html#sistema-de-archivos-sparrow>`_) debe permitir visualizar su estructura en forma arbórea conforme a varios formatos. Actualmente se consideran sólo dos formatos de visualización distintos, conocidos como el *formato compacto* y el *formato extendido*. No obstante, desea que pero se tiene previsto en un futuro cercano añadir más variantes, por lo que se desea que la aplicación sea facilmente extendible a este respecto.
+El `Sistema de Archivos Sparrow <pr02_composite.html#sistema-de-archivos-sparrow>`_ debe permitir visualizar su estructura en forma arbórea conforme a varios formatos. Actualmente se consideran sólo dos formatos de visualización distintos, conocidos como el *formato compacto* y el *formato extendido*. No obstante, desea que pero se tiene previsto en un futuro cercano añadir más variantes, por lo que se desea que la aplicación sea facilmente extendible a este respecto.
 
 Los *formatos compacto* y *extendido* que se desean implementar comparten una serie de características comunes y una serie de diferencias. Con respecto a sus aspectos comunes, ambos fomatos deben:
 
