@@ -102,8 +102,18 @@ El alumno, para poder alcanzar los objetivos perseguidos, deberá completar las 
   3. Crear un programa de prueba que verifique el correcto funcionamiento del visitante concreto implementado.
   4. Implementar un visitante concreto para el *formato extendido*, sin tener en cuenta la necesidad de tabular el  contenido de los directorios y archivos comprimidos.
   5. Crear un programa de prueba que verifique el correcto funcionamiento del visitante concreto implementado.
-  6. Modificar los visitantes concretos implementados para que tengan en cuenta el requisito relativo a la tabulación de los elementos anidados.
-  7. Con los programas de prueba implementados anteriormente, verificar el correcto funcionamiento de las modificaciones realizadas para soportar las tabulaciones.
+  6. Crear una clase ``SparrowView`` que represente una especie de cuadro de texto para visualizar el contenido de un sistema de archivos sparrow. Dicha clase ``SparrowView`` tendrá un método ``mostrarSistemaSparrow``, que acepte como parámetro cualquier elemento de un sistema Sparrow y lo muestre por pantalla, en formato extendido, entre dos líneas con algún adorno. Una posible implementación de este método se muestra a continuación:
+
+  .. code-block:: csharp
+
+    Console.Out.WriteLine("======= Sparrow Viewer =======");
+    Console.Out.WriteLine();
+    // Imprimir Sistema Sparrow aquí
+    Console.Out.WriteLine();
+    Console.Out.WriteLine("==============================");
+
+  7. Modificar los visitantes concretos implementados para que tengan en cuenta el requisito relativo a la tabulación de los elementos anidados.
+  8. Con los programas de prueba implementados anteriormente, verificar el correcto funcionamiento de las modificaciones realizadas para soportar las tabulaciones.
 
 Criterios de Autoevaluación
 ============================
