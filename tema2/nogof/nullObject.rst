@@ -1,5 +1,5 @@
-Patrón Composite
-==================
+Patrón Null Object
+===================
 
 Problema a resolver
 ---------------------
