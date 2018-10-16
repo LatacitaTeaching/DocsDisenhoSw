@@ -38,6 +38,7 @@ Receta para aplicar el patrón
     #. Crear una clase abstracta ``Strategy`` que contenga dicho método ``x``.
     #. Añadir una referencia de la clase ``C`` a la clase ``Strategy``.
     #. Reemplazar el bloque de código del método ``m`` con alta variabilidad por una llamada al método ``x`` de la clase ``Strategy``.
+    #. Implementar tantas subclases de la clase ``Strategy`` como variantes existían en el bloque de código con alta variabilidad. 
 
 Detalles a considerar
 -----------------------
