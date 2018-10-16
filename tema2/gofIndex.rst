@@ -9,3 +9,4 @@
     gof/composite
     gof/visitor
     gof/strategy
+    gof/templateMethod
