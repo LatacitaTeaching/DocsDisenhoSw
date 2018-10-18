@@ -52,14 +52,24 @@ Por tanto, en la práctica existen dos variantes de la estrategia internacional,
 
 Actividades
 ============
-El alumno, para alcanzar los objetivos planteados, deberá realizar satisfactoriamente las siguientes actividades:
-1.	Hacer que los visitantes de impresión creados en la práctica dedicada al patrón Visitor soporten, mediante la aplicación del patrón Strategy, las alternativas descritas en la sección anterior.
-2.	Invertir todas las dependencias que se hayan introducido como consecuencia de la aplicación del patrón Strategy.
-3.	Crear y ejecutar los casos de prueba necesarios para probar el correcto funcionamiento de las diferentes estrategias creadas.
-4.	En un proyecto aparte, hacer que los visitantes de impresión creados en la práctica dedicada al patrón Visitor soporten, mediante la utilización de funciones lambda, las alternativas descritas en la sección anterior.
-5.	Crear y ejecutar los casos de prueba necesarios para probar el correcto funcionamiento de la implementación creada basada en lambdas.
-Los puntos 1 a 3 representan el mínimo a realizar para poder superar la asignatura, quedando los puntos 4 y 5 reservados para aquellos alumnos que quieran obtener calificaciones por encima del aprobado.
-Para facilitar la realización de la práctica, el alumno tiene disponible en la plataforma Moodle dos clases, denominadas ReemplazaCaracteres y OrdenaLambda, implementadas en C#. Estas clases contienen código de ejemplo que puede servir de referencia y ayuda a la hora de implementar ciertos aspectos de la práctica que no se consideran relevantes para la consecución de los objetivos de la misma.
-La clase ReemplazaCaracteres contiene la implementación de la función desargentinizar que sustituye la letra y por los caracteres ll. Puede utilizarse como base para implementar los métodos que sustituyen ciertas letras por otros patrones.
-La clase OrdenaLambda contiene una implementación genérica del método de ordenación de la burbuja basado en funciones lambda. Se adjunta también un programa de prueba, contenido dentro de una clase Runner, que utiliza los métodos de la clase OrdenaLambda. Esta clase pretende servir de ejemplo de cómo se declaran y utilizan las funciones lambda en C#.
-La siguiente sección describe los pasos que se deben seguir para aplicar el patrón Strategy.
+El alumno, para alcanzar los objetivos de esta práctica, deberá realizar satisfactoriamente las siguientes actividades:
+
+  #. Hacer que los visitantes de impresión creados en la práctica dedicada al *patrón Visitor* soporten, mediante la aplicación del *patrón Strategy*, las estrategias de impresión para el Sistema de Archivos Sparrow.
+  #. Invertir todas las dependencias que se hayan introducido en los visitantes como consecuencia de la aplicación del *patrón Strategy*.
+  #. En un proyecto o carpeta aparte, hacer que los visitantes de impresión creados en la práctica dedicada al *patrón Visitor* soporten, mediante la utilización de *expresiones lambda*, las estrategias de impresión para el Sistema de Archivos Sparrow.
+
+Para facilitar la realización de la práctica, se pone a disposición del alumno los siguientes ficheros de código fuente.
+
+`ReemplazaCaracteres.cs <src\ReemplazaCaracteres.cs>`_
+  La clase ``ReemplazaCaracteres`` contiene la implementación de la función *desargentinizar* que sustituye la letra ``y`` por los caracteres ``ll``. Puede utilizarse como base para implementar las estrategias de visualización del *Sistema de Archivos Sparrow*.
+
+`OrdenaLambda.cs <src\ReemplazaCaracteres.cs>`_ e `InvocaLambda.cs <src\InvocaLambda.cs>`
+  La clase ``OrdenaLambda`` contiene una implementación genérica del método de ordenación de la burbuja que utiliza *expresiones lambda*. La clase `InvocaLambda` es un programa de pruebas que invoca al método de ordenación de la clase `OrdenaLambda`. El objetivo de estas clases es el de servir de ejemplo acerca de cómo se declaran y utilizan las *expresiones lambda* en C#.
+
+Criterios de Autoevaluación
+============================
+
+Para verificar que el alumno ha implementado correctamente el *patrón Strategy*, se aconseja verificar los siguientes puntos:
+
+  #. Los visitantes de impresión no tienen bloques *ifs* con multitud de ramas a consecuencia de la incorporación de las estrategias gallega, catalana, internacional catalana e internacional gallega. En el caso ideal, los visitantes no tienen ningún bloque ifs, pudiéndose admitir como correctas implementaciones que tengan un if con, a lo sumo, dos ramas. Si alguien tiene dudas de eliminar completamente los bloques ifs, se le aconseja fijarse un momento en el subtítulo de esta práctica.
+  #. Ningún visitante debería tener referencias o crear implementaciones concretas de las estrategias implementadas. De hecho, los visitantes deberían importar sólo la interfaz que representa la estrategia abstracta.
