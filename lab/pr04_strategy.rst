@@ -5,7 +5,7 @@ Práctica 04 - Patrón Statregy e IoD
 A veces la mejor decisión es no tomar ninguna decisión y eso es también una decisión [#f0]_
 ---------------------------------------------------------------------------------------------
 
-.. [#f0] Frase pronunciada por D. Mariano Rajoy Brey `(ver ) <https://goo.gl/D0j203>`_.
+.. [#f0] Frase pronunciada por D. Mariano Rajoy Brey `(ver) <https://goo.gl/D0j203>`_.
 
 Introducción
 =============
@@ -27,8 +27,8 @@ Los objetivos concretos de esta práctica son:
 
   #. Aprender a aplicar el patrón *Strategy*.
   #. Aprender a invertir dependencias.
-	#. Conocer y comprender el funcionamentos las *expresiones lambda*.
-  #. Aprender a utilizar funciones lambda sencillas.
+  #. Conocer y comprender el funcionamentos las *expresiones lambda*.
+  #. Aprender a utilizar *expresiones lambda* sencillas.
   #. Aprender a distinguir entre *complejidad esencial* y *complejidad accidental*.
 
 Para alcanzar dichos objetivos, el alumno deberá aplicar el patrón *Strategy*, *inversión de dependencias* y *expresiones lambda* a la situación que se describe a continuación.
@@ -54,16 +54,16 @@ Actividades
 ============
 El alumno, para alcanzar los objetivos de esta práctica, deberá realizar satisfactoriamente las siguientes actividades:
 
-  #. Hacer que los visitantes de impresión creados en la práctica dedicada al *patrón Visitor* soporten, mediante la aplicación del *patrón Strategy*, las estrategias de impresión para el Sistema de Archivos Sparrow.
+  #. Hacer que los visitantes de impresión creados en la práctica dedicada al *patrón Visitor* soporten, mediante la aplicación del *patrón Strategy*, las estrategias de impresión para el *Sistema de Archivos Sparrow*.
   #. Invertir todas las dependencias que se hayan introducido en los visitantes como consecuencia de la aplicación del *patrón Strategy*.
-  #. En un proyecto o carpeta aparte, hacer que los visitantes de impresión creados en la práctica dedicada al *patrón Visitor* soporten, mediante la utilización de *expresiones lambda*, las estrategias de impresión para el Sistema de Archivos Sparrow.
+  #. En un proyecto o carpeta aparte, hacer que los visitantes de impresión creados en la práctica dedicada al *patrón Visitor* soporten, mediante la utilización de *expresiones lambda*, las estrategias de impresión para el *Sistema de Archivos Sparrow*.
 
 Para facilitar la realización de la práctica, se pone a disposición del alumno los siguientes ficheros de código fuente.
 
 `ReemplazaCaracteres.cs <src\ReemplazaCaracteres.cs>`_
   La clase ``ReemplazaCaracteres`` contiene la implementación de la función *desargentinizar* que sustituye la letra ``y`` por los caracteres ``ll``. Puede utilizarse como base para implementar las estrategias de visualización del *Sistema de Archivos Sparrow*.
 
-`OrdenaLambda.cs <src\ReemplazaCaracteres.cs>`_ e `InvocaLambda.cs <src\InvocaLambda.cs>`
+`OrdenaLambda.cs <src\pr04\ReemplazaCaracteres.cs>`_ e `InvocaLambda.cs <src\pr04\InvocaLambda.cs>`_
   La clase ``OrdenaLambda`` contiene una implementación genérica del método de ordenación de la burbuja que utiliza *expresiones lambda*. La clase `InvocaLambda` es un programa de pruebas que invoca al método de ordenación de la clase `OrdenaLambda`. El objetivo de estas clases es el de servir de ejemplo acerca de cómo se declaran y utilizan las *expresiones lambda* en C#.
 
 Criterios de Autoevaluación
