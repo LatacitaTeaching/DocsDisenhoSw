@@ -10,3 +10,4 @@
    pr01_mixin
    pr02_composite
    pr03_visitor
+   pr04_strategy
