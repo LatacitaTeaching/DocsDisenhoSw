@@ -60,10 +60,10 @@ El alumno, para alcanzar los objetivos de esta práctica, deberá realizar satis
 
 Para facilitar la realización de la práctica, se pone a disposición del alumno los siguientes ficheros de código fuente.
 
-`ReemplazaCaracteres.cs <src\ReemplazaCaracteres.cs>`_
+:download:`ReemplazaCaracteres.cs <src/pr04/ReemplazaCaracteres.cs>`
   La clase ``ReemplazaCaracteres`` contiene la implementación de la función *desargentinizar* que sustituye la letra ``y`` por los caracteres ``ll``. Puede utilizarse como base para implementar las estrategias de visualización del *Sistema de Archivos Sparrow*.
 
-`OrdenaLambda.cs <src\pr04\ReemplazaCaracteres.cs>`_ e `InvocaLambda.cs <src\pr04\InvocaLambda.cs>`_
+:download:`OrdenaLambda.cs <src/pr04/OrdenaLambda.cs>` e :download:`InvocaLambda.cs <src/pr04/InvocaLambda.cs>`
   La clase ``OrdenaLambda`` contiene una implementación genérica del método de ordenación de la burbuja que utiliza *expresiones lambda*. La clase `InvocaLambda` es un programa de pruebas que invoca al método de ordenación de la clase `OrdenaLambda`. El objetivo de estas clases es el de servir de ejemplo acerca de cómo se declaran y utilizan las *expresiones lambda* en C#.
 
 Criterios de Autoevaluación
