@@ -86,7 +86,7 @@ El alumno, para alcanzar los objetivos planteados en esta práctica, deberá rea
   #.	Crear una nueva estrategia de reemplazo de caracteres propios del castellano denominada *YourOcre* [#f2]_. En dicha estrategia se preservan las vocales con tilde y se sustituye el carácter ``ñ`` por los caracteres ``ni``.
   #. Modificar el programa de pruebas para que al iniciarse la aplicación se inicialice la factoría abstracta a la configuración abierta utilizando la estrategia *YourOcre* como estrategia de reemplazo de caracteres castellanos.
   #. Crear módulos *Ninject* para especificar las dependencias a inyectar en las configuraciones *básica*, *estándar*, *extendida gallega* y *extendida catalana*.
-  #. Modificar la clase ``SparrowView``  para que utilice el inyector de dependencias para creación de los visitantes de impresión.
+  #. Modificar la clase ``SparrowView`` para que utilice el inyector de dependencias para la creación de los visitantes de impresión.
 
 Para facilitar la realización de la práctica, se pone a disposición del alumno el siguiente proyecto de *Visual Studio* donde se hace utilización de la inyección de dependencias mediante *Ninject*.
 
