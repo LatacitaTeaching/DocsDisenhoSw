@@ -80,13 +80,13 @@ El alumno, para alcanzar los objetivos planteados en esta práctica, deberá rea
   #. Crear una *factoría abstracta* para soportar la creación de estrategias y visitantes de impresión de acuerdo con las diferentes configuraciones existentes dentro de la especificación original del *Sistema de Archivos Sparrow*.
   #. Crear *factorías concretas* que den soporte a las configuraciones *básica*, *estándar*, *extendida gallega* y *extendida catalana*.
   #. Aplicar el patrón *singleton* a las factorías creadas en el punto anterior de manera que sólo pueda existir una instancia de la factoría abstracta en tiempo de ejecución.
-  #. Modificar el programas de prueba creado en prácticas anteriores para que al inicializar la aplicación se inicie las factoría abstracta con la configuración *extendida gallega*.
+  #. Modificar el programa de prueba creado en prácticas anteriores para que al inicializar la aplicación se inicie las factoría abstracta con la configuración *extendida gallega*.
   #. Modificar la clase ``SparrowView`` creada en prácticas anteriores para que haga uso de las factorías abstractas para la creación de los visitantes de impresión.
   #. Crear una factoría concreta para la configuración *abierta*. Dicha factoría utilizará el patrón *Prototype* para permitir la incorporación de estrategias de cambio de caracteres propio del castellano que puedan ser distintas a las actualmente definidas.
   #.	Crear una nueva estrategia de reemplazo de caracteres propios del castellano denominada *YourOcre* [#f2]_. En dicha estrategia se preservan las vocales con tilde y se sustituye el carácter ``ñ`` por los caracteres ``ni``.
-  #. Modificar el programa de pruebas para que al iniciarse la aplicación inicialice la factoría abstracta a la configuración abierta utilizando la estrategia *YourOcre* como estrategia de reemplazo de caracteres castellanos.
-  #. En un proyecto aparte, que no tenga definidas factorías, crear módulos *Ninject* para especificar las dependencias a inyectar en las configuraciones *básica*, *estándar*, *extendida gallega* y *extendida catalana*.
-  #. En el nuevo proyecto creado, modificar la clase ``SparrowView``  para que utilice el inyector de dependencias para creación de los visitantes de impresión.
+  #. Modificar el programa de pruebas para que al iniciarse la aplicación se inicialice la factoría abstracta a la configuración abierta utilizando la estrategia *YourOcre* como estrategia de reemplazo de caracteres castellanos.
+  #. Crear módulos *Ninject* para especificar las dependencias a inyectar en las configuraciones *básica*, *estándar*, *extendida gallega* y *extendida catalana*.
+  #. Modificar la clase ``SparrowView``  para que utilice el inyector de dependencias para creación de los visitantes de impresión.
 
 Para facilitar la realización de la práctica, se pone a disposición del alumno el siguiente proyecto de *Visual Studio* donde se hace utilización de la inyección de dependencias mediante *Ninject*.
 
@@ -102,8 +102,7 @@ Para verificar que el alumno ha implementado correctamente los patrones *Abstrac
   #. Existe una única factoría abstracta para toda la aplicación.
   #. Existe un método *create* en la factoría abstracta por cada clase que pueda variar dentro de una configuración concreta.
   #. Los métodos *create* de la factoría abstracta no contiene parámetros.
-  #.  Existe una factoría concreta por configuración posible de la aplicación.
-  #. No existen referencias a visitantes de impresión concretos o estartegias de visualización concretas fuera de la función *main* de la aplicación.
+  #. Existe una factoría concreta por configuración posible de la aplicación.
   #. La factoría abstracta se inicializa sólo al iniciar la aplicación, dentro del *main*.
   #. Los constructores de las factorías no son públicos.
   #. La creación de nuevos objetos a partir del prototipo proporcionado se realiza mediante el clonado de dicho prototipo.
