@@ -106,3 +106,15 @@ Para verificar que el alumno ha implementado correctamente los patrones *Abstrac
   #. La factoría abstracta se inicializa sólo al iniciar la aplicación, dentro del *main*.
   #. Los constructores de las factorías no son públicos.
   #. La creación de nuevos objetos a partir del prototipo proporcionado se realiza mediante el clonado de dicho prototipo.
+
+Apéndice: Cómo instalar Ninject en un proyecto VS
+==================================================
+
+Para instalar *Ninject* dentro de un proyecto de Visual Studio se deben realizar las siguientes acciones:
+
+  #. En el *Explorador de Soluciones* (workspace), seleccionar el proyecto donde se desea añadir *Ninject*.
+  #. Pulsar en el ratón boton derecho, y sobre el menú que se despliega seleccionar *Administrador paquetes NuGet*.
+  #. Dentro de la ventana que se abre sobre el editor, seleccionar la pestaña *Examinar*.
+  #. Escribir en la caja de búsqueda *Ninject*.
+  #. Seleccionar entre los resultados *Ninject*.
+  #. A la derecha de la lista de resultados, teniendo *Ninject* seleccionado, pulsar sobre el botón *Instalar*
