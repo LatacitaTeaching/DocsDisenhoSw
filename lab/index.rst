@@ -11,3 +11,4 @@
    pr02_composite
    pr03_visitor
    pr04_strategy
+   pr06_observer
