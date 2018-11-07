@@ -34,10 +34,8 @@ Receta para aplicar el patrón
   #. Identificar la clase ``C`` cuyas modificaciones necesitan ser notificadas.
   #. Crear una clase abstracta ``C_Observer``.
   #. Añadir un método ``void x_Changed(<params>)`` a la clase abstracta ``C_Observer`` por cada cambio ``x`` en ``C`` que necesite ser notificado. Añadir como parámetros a ese métodos los que se estime conveniente para que los observadores puedan actualizar su estado tras ser notificados.
-  #. Añadir a la clase ``C`` un conjunto ``observers`` de ``C_Observer``s. Permitir además que se puedan añadir y eliminar objetos a esta colección en tiempo de ejecución.
-  #. Añadir a la clase ``C`` un método no público ``notify_x()`` por cada tipo de cambio ``x`` que pueda producirse
-  en la clase ``C``. Dicho método recorrerá la colección ``observers`` e invocará por cada elemento ``obs`` de
-  dicha colección su método ``x_changed(..)``,  proporcionando los parámetros adecuados.
+  #. Añadir a la clase ``C`` un conjunto ``observers`` de ``C_Observer`` s. Permitir además que se puedan añadir y eliminar objetos a esta colección en tiempo de ejecución.
+  #. Añadir a la clase ``C`` un método no público ``notify_x()`` por cada tipo de cambio ``x`` que pueda producirse en la clase ``C``. Dicho método recorrerá la colección ``observers`` e invocará por cada elemento ``obs`` de dicha colección su método ``x_changed(..)``,  proporcionando los parámetros adecuados.
   #. Hacer que siempre que ``C`` sufra un cambio ``x`` se invoque el método ``notify_x()``.
   #. Hacer que cada clase que necesite actualizarse cuando ``C`` cambie implemente la clase abstracta ``C_Observer``.
   #. Hacer que, cuando un objeto ``obj`` necesite actualizarse cuando un objeto concreto ``unC`` de la clase ``C``  cambie, el objeto ``obj`` se registre como observador en dicho objeto ``unC``.
