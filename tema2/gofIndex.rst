@@ -10,3 +10,4 @@
     gof/visitor
     gof/strategy
     gof/templateMethod
+    gof/observer
