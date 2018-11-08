@@ -12,7 +12,7 @@ Introducción
 
 Un problema clásico dentro del ámbito del desarrollo software es el de cómo propagar o notificar cambios de estado que suceden dentro de un determinado módulo software a otros módulos software que necesiten conocer cuáles han sido esos cambios. Este problema es tan recurrente que incluso ha dado lugar a la reciente aparición de un nuevo paradigma de programación, conocido como `Reactive Programming <https://gist.github.com/staltz/868e7e9bc2a7b8c1f754>`_, el cual trata de resolver el problema de la propagación de cambios en el procesamiento de flujos (*streams*) de eventos o datos. Dentro del paradigma de la orientación a objetos, este problema se suele resolver mediante el patrón *Observer*. Este patrón está presente en multitud de frameworks y librerías (e.g., Swing).
 
-El objetivo general de esta práctica es que el alumno aprenda a instanciar el patrón *Observer* mediante su aplicación a un problema concerto. La siguiente sección describe los objetivos de esta práctica de manera más detallada.
+El objetivo general de esta práctica es que el alumno aprenda a instanciar el patrón *Observer* mediante su aplicación a un problema concreto. La siguiente sección describe los objetivos de esta práctica de manera más detallada.
 
 Objetivos
 ==========
@@ -20,8 +20,8 @@ Objetivos
 Los objetivos concretos de esta práctica son:
 
   #. Comprender el funcionamiento general del patrón *Observer*.
-  #. Comprender que pueden existir observadores de muy distanta naturaleza.
-  #. Aprender a instaciar el patrón *Observer*.
+  #. Comprender que pueden existir observadores de muy distinta naturaleza.
+  #. Aprender a instanciar el patrón *Observer*.
 
 Para alcanzar dichos objetivos, el alumno deberá realizar de forma satisfactoria una serie de actividades relacionadas con el problema que se describe a continuación.
 
@@ -54,13 +54,15 @@ El alumno, para alcanzar los objetivos perseguidos, deberá completar las siguie
   #. Añadir los enlaces al diseño creado para la práctica del patrón *Composite* en caso de que los enlaces no estuviesen aún añadidos. Si el alumno no sabe cómo hacerlo, deberá consultarlo con el profesorado de la asignatura, el cual le explicará con mucho gusto y en detalle como hacerlo.
   #. Hacer que los enlaces guarden dentro su clase, en un atributo, el nombre del elemento al que apuntan.
   #. Convertir a los enlaces en observadores de los elementos a los cuales apuntan, de manera que el nombre almacenado pueda actualizarse cuando los enlaces cambian.
-  #. Descargar el proyecto propocionado al final de esta sección, el cual  contiene el código inicial del *Explorador del Sistema de Archivos Sparrow*.
+  #. Descargar el proyecto proporcionado al final de esta sección, el cual  contiene el código inicial del *Explorador del Sistema de Archivos Sparrow*.
   #. Realizar las modificaciones necesarias en dicho proyecto para que compile y se pueda ejecutar correctamente.
   #. Convertir a las clases *SparrowNode* y *SparrowElementViewerCtrl* en observadores de elementos del *Sistema de Archivos Sparrow*, de manera que cuando estos elementos cambien, dichos cambios se reflejen en la interfaz gráfica.
 
 .. note:: Junto con el proyecto moodle se proporciona otro formulario,   implementado por la clase ``FileNameEditor``, con el objetivo de permitir que
- los nombres de los elementos del sistema de archivos visualizado por el *Explorador de Archivos Sparrow* se puedan visualizar cómodamente. Por limitaciones de este editor, se recomienda no dar el mismo nombre a dos elementos del sistema de archivos, aunque estén sitos en directorios diferentes, ya que dicha situación podría provocar comportamientos anómalos.    
+ los nombres de los elementos del sistema de archivos visualizado por el *Explorador de Archivos Sparrow* se puedan visualizar cómodamente. Por limitaciones de este editor, se recomienda no dar el mismo nombre a dos elementos del sistema de archivos, aunque estén sitos en directorios diferentes, ya que dicha situación podría provocar comportamientos anómalos.
 
+:download:`Explorador de Archivos Sparrow <src/pr06/SparrowFileExplorer.zip>`
+  Proyecto Visual Studio C# conteniendo la definición de las interfaces gráficas que conformarán el *Explorador de Archivos Sparrow*.
 
 Criterios de Autoevaluación
 ============================
