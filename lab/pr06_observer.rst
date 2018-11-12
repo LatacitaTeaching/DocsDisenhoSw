@@ -66,3 +66,12 @@ El alumno, para alcanzar los objetivos perseguidos, deberá completar las siguie
 
 Criterios de Autoevaluación
 ============================
+
+  #. Existe una interfaz o clase abstracta que representa a cualquier observador de un elemento *Sparrow*.
+  #. Dicha clase abstracta o interfaz de observación permite notificar cualquier cambio que sea relevante en los objetos observados.
+  #. Cada objeto que necesita actualizarse cuando un objeto *Sparrow* cambia implementa de manera adecuada la interfaz de observación.
+  #. Los elementos *Sparrow* contienen un registro de observadores en el cual es posible tanto darse de alta como de baja.
+  #. Todos los observadores de un objeto *Sparrow* ``x`` se registran como observadores en dicho objeto ``x`` tan pronto como se establece un vínculo con dicho objeto.
+  #. Todos los observadores de un objeto *Sparrow* ``x`` se retiran del registro de observadores tan pronto  como un vínculo con dicho objeto ``x`` se deshace.
+  #. Siempre que hay un cambio relevante en un objeto *Sparrow* se procede a notificar a sus observadores.
+  #. Se evitan de alguna forma bucles infinitos por notificaciones cruzadas. 
