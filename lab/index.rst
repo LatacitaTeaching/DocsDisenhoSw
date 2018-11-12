@@ -12,3 +12,4 @@
    pr03_visitor
    pr04_strategy
    pr05_abstractFactory
+   pr06_observer
