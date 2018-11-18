@@ -27,7 +27,7 @@ Los objetivos concretos de esta práctica son:
 
   #. Comprender que ciertas acciones realizadas dentro de un programa software, aunque puedan parecer equivalentes a otras, pueden tener un serio impacto sobre ciertas propiedades de dicho producto software.
   #. Aprender a solventar el problema de la creación de objetos con procesos de instanciación pesados mediante la utilización de un *Object Pool*.
-  #. Aprender a integrar un *Object Pool* en una aplicación real de manera adecuada mediante la aplicación del patrón Singleton.
+  #. Aprender a integrar un *Object Pool* en una aplicación real de manera adecuada mediante la aplicación del patrón *Singleton*.
 
 Actividades
 ============
@@ -35,4 +35,4 @@ Actividades
 El alumno, para alcanzar los objetivos descritos, deberá completar satisfactoriamente las siguientes actividades, utilizando para ello el lenguaje de programación Java:
 
   #. Crear en un *Object Pool* de conexiones *JDBC (Java DataBase Connectivity)*. Las conexiones se crearán mediante la clase ``DriverManager``. El número de conexiones que contendrá inicialmente el *pool* debe ser configurable. En el caso de que se solicite una conexión y el *pool* no tenga conexiones disponibles, se alimentará de nuevo el *pool* con un número de conexiones igual a su tamaño inicial. Cuando se retornen conexiones, si el *pool* ha alcanzado su máxima capacidad, las conexiones retornadas simplemente se cerrarán y se desecharán.
-  #. Convertir el pool en un Singleton.
+  #. Convertir el pool en un *Singleton*.
