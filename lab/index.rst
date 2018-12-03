@@ -14,3 +14,5 @@
    pr05_abstractFactory
    pr06_observer
    pr08_objectPool
+   pr09_domainDrivenDesign
+   
