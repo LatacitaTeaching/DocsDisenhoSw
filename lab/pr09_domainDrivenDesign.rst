@@ -5,9 +5,9 @@ Práctica 09 - Domain-Driven Design
 Introducción
 =============
 
-La filosofía o metodología de desarrollo `Domain-Driven Design <https://domainlanguage.com/ddd/reference/>`_ establece que la mejor estrategia para lidiar con la creciente complejidad de los sistemas software es crear, de manera colaborativa entre *stakeholders* y desarrolladores, un modelo que repesente el dominio del problema que dicho sistema software trata de resolver.
+La filosofía o metodología de desarrollo `Domain-Driven Design <https://domainlanguage.com/ddd/reference/>`_ establece que la mejor estrategia para lidiar con la creciente complejidad de los sistemas software es crear, de manera colaborativa entre *stakeholders* y desarrolladores, un modelo que represente el dominio del problema que dicho sistema software trata de resolver.
 
-Dicho *modelo de dominio* contendrá una representación, lo más cercana posible a la realidad, de todos los aspectos del dominio de la aplicación que sean relevantes para la construcción del sistema software bajo desarrollo. Este *modelo de dominio* constituirá un *lenguaje univesal* que impregnará toda la aplicación y que será el nexo de unión entre desarrolladores y *stakeholders*.
+Dicho *modelo de dominio* contendrá una representación, lo más cercana posible a la realidad, de todos los aspectos del dominio de la aplicación que sean relevantes para la construcción del sistema software bajo desarrollo. Este *modelo de dominio* constituirá un *lenguaje universal* que impregnará toda la aplicación y que será el nexo de unión entre desarrolladores y *stakeholders*.
 
 Este modelo de dominio deberá especificar: (1) qué elementos constituyen el dominio de la aplicación, incluyendo tanto objetos como operaciones y eventos; (2) cómo se deben combinar dichos elementos y qué reglas se debe obedecer para componerlos; (3) las reglas que rigen las transformaciones que se pueden aplicar a cada objeto, o dicho de otra forma, las *reglas de negocio* que rigen el funcionamiento de dicho dominio.
 
@@ -23,7 +23,8 @@ Los objetivos concretos de esta práctica son:
   #. Comprender el funcionamiento básico de la metodología *Domain-Driven Design*.
   #. Aprender a crear modelos de dominio que represente el núcleo fundamental de un Sistema de Informacion Empresarial.
   #. Aprender a identificar *entities*, *value objects*, *services* y *aggregates*.
-  #. Aprender a identificar diferentes tipos de *entities*.
+  #. Aprender a diseñar identificadores para diferentes tipos de *entities*.
+  #. Aprender a refinar un modelo de dominio dada la naturaleza de sus elementos
   #. Aprender a implementar de manera correcta *aggregate roots*.
 
 Para alcanzar dichos objetivos, el alumno deberá realizar de forma satisfactoria una serie de actividades relacionadas con el dominio de aplicación que se describe a continuación.
@@ -40,7 +41,7 @@ Las series que ofrece el sistema se clasificarán inicialmente en tres categorí
     #. **Silver**: series de demanda o actualidad media (e.g., Paquita Salas);
     #. **Gold**: para series de gran demanda y actualidad (e.g., Juego de Tronos).
 
-La visualización de un capítulo de una serie estándar se cobrará inicialmente a 0.50€; el capítulo de una serie silver a 0.75€; y el de una serie gold a 1.50€. Para los grandes consumidores de series existe la opción de pagar una cuota fija mensual de 20€ con la que poder visualizar todos los capítulos de todas las series que se desee.
+La visualización de un capítulo de una *serie estándar* se cobrará inicialmente a 0.50€; el capítulo de una *serie silver* a 0.75€; y el de una *serie gold* a 1.50€. Para los grandes consumidores de series existe la opción de pagar una cuota fija mensual de 20€ con la que poder visualizar todos los capítulos de todas las series que se desee.
 
 Cada usuario, para poder acceder a la plataforma, tendrá que proporcionar un nombre de usuario, que será único para cada usuario dentro de la plataforma, una contraseña de acceso al sistema y una cuenta bancaria en formato IBAN.
 
@@ -57,7 +58,7 @@ Tras autenticarse en el sistema, cada usuario accede en primer lugar a su espaci
 El nombre del usuario se muestra en la parte superior de la página. En el caso de la Figura 1, el usuario sería *John Nieve*. Desde esta página, cada usuario puede realizar las siguientes acciones:
 
   #. Seleccionar una serie para su visualización;
-  #. Agregar una nueva serie a la lista de pendientes;
+  #. Navegar por el catálogo de series para agregar una nueva serie a la lista de pendientes;
   #. Comprobar el estado de la factura actual o visualizar las facturas ya cobradas.
 
 Cada una de estas acciones se describen a continuación.
@@ -128,5 +129,4 @@ El alumno, para alcanzar los objetivos perseguidos, deberá completar satisfacto
   #. Crear un modelo de dominio, bajo la forma de un diagrama de clases UML, para dar soporte al sistema *Polaflix*. Como resultado de esta actividad el alumno deberá entregar una imagen en formato png, que ilustre dicho diagrama. Si el diagrama fuese muy grande, puede dividirse en varias subimágenes.
   #. En un documento de texto aparte, especificar qué clases de las contenidas en el modelo de dominio son *entities, cuáles *value objects* y cuáles *services*.
   #. En el mismo documento del punto anterior, indicar cómo se agrupan las clases en *aggregates*, especificando en cada caso cuál es el *aggregate root*.
-  #. Crear los repositorios que sean necesario para el almacenamiento de los *aggregate roots*, incluyendo en cada repositorio las operaciones que se consideren convenientes, junto con una breve justificación.
-  #. Implementar como clases simples de Java, o *POJOS (Plain Old Java Objects)*, el *aggregate* que contenga a la clase que represente a los usuarios. Utilizar clases vacías, que solo contengan los atributos identificadores, para representar clases externas al *aggregate*.
+  #. Implementar como clases simples de Java, o *POJOS (Plain Old Java Objects)*, el *aggregate* que contenga a la clase que represente a los usuarios. Utilizar clases vacías, que sólo contengan los atributos identificadores, para representar las clases externas a dicho *aggregate*.
