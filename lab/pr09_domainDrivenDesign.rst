@@ -127,6 +127,6 @@ Actividades
 El alumno, para alcanzar los objetivos perseguidos, deberá completar satisfactoriamente las siguientes actividades:
 
   #. Crear un modelo de dominio, bajo la forma de un diagrama de clases UML, para dar soporte al sistema *Polaflix*. Como resultado de esta actividad el alumno deberá entregar una imagen en formato png, que ilustre dicho diagrama. Si el diagrama fuese muy grande, puede dividirse en varias subimágenes.
-  #. En un documento de texto aparte, especificar qué clases de las contenidas en el modelo de dominio son *entities, cuáles *value objects* y cuáles *services*.
+  #. En un documento de texto aparte, especificar qué clases de las contenidas en el modelo de dominio son *entities*, cuáles *value objects* y cuáles *services*.
   #. En el mismo documento del punto anterior, indicar cómo se agrupan las clases en *aggregates*, especificando en cada caso cuál es el *aggregate root*.
   #. Implementar como clases simples de Java, o *POJOS (Plain Old Java Objects)*, el *aggregate* que contenga a la clase que represente a los usuarios. Utilizar clases vacías, que sólo contengan los atributos identificadores, para representar las clases externas a dicho *aggregate*.
