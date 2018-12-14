@@ -1,5 +1,5 @@
 =============================================
-Práctica 09 - Persistencia Objeto-Relacional
+Práctica 10 - Persistencia Objeto-Relacional
 =============================================
 
 Introducción
