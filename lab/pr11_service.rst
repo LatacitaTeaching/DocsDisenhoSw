@@ -31,7 +31,7 @@ Objetivos
 
 Los objetivos concretos que se persiguen con la realización de esta práctica son:
 
-  #.	Aprender a especificar la interfaz de la capa de negocio de una aplicación empresarial.
+  #.	Aprender a especificar la interfaz de la capa de servicio de una aplicación empresarial.
   #. Aprender a crear *Data Transfers Objects* que permitan transferir objetos de negocio a una capa de presentación.
   #.	Aprender a implementar capas de servicio basadas en el patrón *Domain Model*.
   #. Comprender cómo se integran las diferentes capas de una aplicación empresarial.
