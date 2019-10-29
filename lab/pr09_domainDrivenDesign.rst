@@ -89,7 +89,7 @@ Al seleccionar la opción *Agregar Serie* (Figura 1), se debe redirigir el usuar
    :align: center
    :alt: Interfaz ``Ver Catálogo``
 
-   Figura 2. Interfaz ``Ver Catálogo``.
+   Figura 3. Interfaz ``Ver Catálogo``.
 
 Para facilitar la visualización de dicha lista, esta interfaz sólo mostrará, en una misma página, las series que comienzan por una determinada inicial. Además, como era de esperar, la lista de series correspondientes a una misma inicial se listarán alfabéticamente ordenadas. Para facilitar la navegación por las diferentes letras del alfabeto, la interfaz deberá disponer en su parte superior de algún tipo de *widget* que permita cambiar la inicial que está siendo visualizada.
 
@@ -108,7 +108,7 @@ Cuando se selecciona la opción *Ver Cargos* (Figura 1), la aplicación redirigi
    :align: center
    :alt: Interfaz ``Ver Facturas``
 
-   Figura 2. Interfaz ``Ver Facturas``.
+   Figura 4. Interfaz ``Ver Facturas``.
 
 La interfaz de control de la facturación mostrará inicialmente la factura correspondiente al mes en curso. La factura de cada mes contendrá una entrada por cada capítulo visualizado en ese mes. Por cada entrada, se deberá mostrar:
 

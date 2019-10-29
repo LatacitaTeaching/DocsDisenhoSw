@@ -16,3 +16,4 @@
    pr08_objectPool
    pr09_domainDrivenDesign
    pr10_persistence
+   pr11_service
