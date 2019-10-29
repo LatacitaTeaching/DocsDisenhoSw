@@ -5,7 +5,7 @@ Práctica 06 - Patrón Observer
 La Ventana Indiscreta [#f0]_
 ---------------------------------------------------------------------------------------------
 
-.. [#f0] En homenaje a la magnífica película del mismo nombre realizada Alfred Hitchcock en 1954 y protagonizada por un excelso James Stewart.
+.. [#f0] En homenaje a la magnífica película del mismo nombre realizada por Alfred Hitchcock en 1954 y protagonizada por un excelso James Stewart.
 
 Introducción
 =============
@@ -51,9 +51,9 @@ Actividades
 
 El alumno, para alcanzar los objetivos perseguidos, deberá completar las siguientes actividades:
 
-  #. Añadir los enlaces al diseño creado para la práctica del patrón *Composite* en caso de que los enlaces no estuviesen aún añadidos. Si el alumno no sabe cómo hacerlo, deberá consultarlo con el profesorado de la asignatura, el cual le explicará con mucho gusto y en detalle como hacerlo.
+  #. Añadir los enlaces al diseño creado para la práctica del patrón *Composite* en caso de que los enlaces no estuviesen aún añadidos. Si el alumno no sabe cómo hacerlo, deberá consultarlo con el profesorado de la asignatura, el cual le explicará, con mucho gusto y en detalle, cómo hacerlo.
   #. Hacer que los enlaces guarden dentro su clase, en un atributo, el nombre del elemento al que apuntan.
-  #. Convertir a los enlaces en observadores de los elementos a los cuales apuntan, de manera que el nombre almacenado pueda actualizarse cuando los enlaces cambian.
+  #. Convertir los enlaces en observadores de los elementos a los cuales apuntan, de manera que el nombre almacenado pueda actualizarse cuando los elementos enlazados cambien.
   #. Descargar el proyecto proporcionado al final de esta sección, el cual  contiene el código inicial del *Explorador del Sistema de Archivos Sparrow*.
   #. Realizar las modificaciones necesarias en dicho proyecto para que compile y se pueda ejecutar correctamente.
   #. Convertir a las clases *SparrowNode* y *SparrowElementViewerCtrl* en observadores de elementos del *Sistema de Archivos Sparrow*, de manera que cuando estos elementos cambien, dichos cambios se reflejen en la interfaz gráfica.
@@ -74,4 +74,4 @@ Criterios de Autoevaluación
   #. Todos los observadores de un objeto *Sparrow* ``x`` se registran como observadores en dicho objeto ``x`` tan pronto como se establece un vínculo con dicho objeto.
   #. Todos los observadores de un objeto *Sparrow* ``x`` se retiran del registro de observadores tan pronto  como un vínculo con dicho objeto ``x`` se deshace.
   #. Siempre que hay un cambio relevante en un objeto *Sparrow* se procede a notificar a sus observadores.
-  #. Se evitan de alguna forma bucles infinitos por notificaciones cruzadas. 
+  #. Se evitan de alguna forma bucles infinitos por notificaciones cruzadas.
