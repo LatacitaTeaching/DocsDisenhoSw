@@ -34,22 +34,21 @@ Actividades
 
 El alumno, para alcanzar los objetivos perseguidos, deberá completar las siguientes actividades:
 
-  #. Crear un iterador que permita recorrer los *Sistemas de Archivos Sparrow* creados en prácticas anteriores. Para ello se recomiendo utilizar como guía la implementación ejemplo de un iterador sobre composites encontrada más abajo.
-  #. Crear, en una clase denominada `SparrowHelper`, una función estática que acepte un sistema de archivos Sparrow y una cadena de caracteres, y devuelva la colección de elementos de dicho sistema de archivos cuyo nombre contiene la cadena de caracte-res pasada como parámetro. 
-4.	Crear, en la clase SparrowHelper, otra función estática que acepte un sistema de ar-chivos Sparrow y una cadena de caracteres y devuelva un elemento del sistema (el primero que encuentre) cuyo nombre contiene la cadena de caracteres pasado como parámetro.  Para la creación de esta función queda terminantemente prohibido rom-per el bucle mediante una sentencia return o break.
+  #. Crear un iterador que permita recorrer los *Sistemas de Archivos Sparrow* creados en prácticas anteriores. Para ello se recomiendo utilizar como guía la implementación ejemplo de un iterador sobre composites disponible al final de esta sección. El iterador debe crearse usando las interfaces proporcionadas por C# a tal efecto, es decir, ``IEnumerable<T>`` e ``IEnumerator<T>``.
+  #. Crear, en una clase denominada ``SparrowHelper``, una función estática denominada ``findHeavierThan`` que acepte un *Sistema de Archivos Sparrow* y un entero representado un tamaño de archivo, y que devuelva como resultado el conjunto de elementos del sistema de archivos Sparrow que superen dicho tamaño. Esta función debe implementarse usando bucles *while*, sin usar bucles *forEach*.
+  #. Crear, en una clase denominada ``SparrowHelper``, una función estática denominada ``findSizeInRange`` que acepte un *Sistema de Archivos Sparrow* y dos enteros representado un tamaño de archivo y que devuelva como resultado el conjunto de elementos del sistema de archivos Sparrow cuto tamaño esté entre los valores especificados. Esta función debe implementarse usando  bucles *forEach*.
+  #. Crear, en la clase ``SparrowHelper`` generada anteriormente, otra función estática, denominada ``findWithPrefix`` que acepte un sistema de archivos Sparrow y una cadena de caracteres y devuelva un elemento del sistema (el primero que encuentre) cuyo nombre contiene como prefijo la cadena de caracteres pasada como parámetro. Para la creación de esta función queda terminantemente prohibido romper el bucle mediante una sentencia *return* o *break*.
 
+:download:`Ejemplo Implementación Iterador Sobre Composite <src/pr07/IteradorComposite.zip>`
+  Proyecto Visual Studio C# con una implementación de ejemplo del patrón Iterator sobre un Composite.
 
-:download:`Explorador de Archivos Sparrow <src/pr06/SparrowFileExplorer.zip>`
-  Proyecto Visual Studio C# conteniendo la definición de las interfaces gráficas que conformarán el *Explorador de Archivos Sparrow*.
+.. tip:: Para saber si una cadena ``x`` contiene como prefijo otra cadena ``y``, en C# se puede utiliuzar el método ``StartsWith``.
 
 Criterios de Autoevaluación
 ============================
 
-  #. Existe una interfaz o clase abstracta que representa a cualquier observador de un elemento *Sparrow*.
-  #. Dicha clase abstracta o interfaz de observación permite notificar cualquier cambio que sea relevante en los objetos observados.
-  #. Cada objeto que necesita actualizarse cuando un objeto *Sparrow* cambia implementa de manera adecuada la interfaz de observación.
-  #. Los elementos *Sparrow* contienen un registro de observadores en el cual es posible tanto darse de alta como de baja.
-  #. Todos los observadores de un objeto *Sparrow* ``x`` se registran como observadores en dicho objeto ``x`` tan pronto como se establece un vínculo con dicho objeto.
-  #. Todos los observadores de un objeto *Sparrow* ``x`` se retiran del registro de observadores tan pronto  como un vínculo con dicho objeto ``x`` se deshace.
-  #. Siempre que hay un cambio relevante en un objeto *Sparrow* se procede a notificar a sus observadores.
-  #. Se evitan de alguna forma bucles infinitos por notificaciones cruzadas.
+  #. Todos los elementos del *Sistema de Archivos Sparrow* implementan la interfaz ``IEnumerable<T>``.
+  #. Existe al menos un ``IEnumerator<T>`` para las hojas y otro para los nodos, pudiendo existir más de uno.
+  #. Las funciones ``findHeavierThan``, ``findSizeInRange`` y ``findWithPrefix`` funcionan correctamente.
+  #. Las funciones ``findHeavierThan``, ``findSizeInRange`` y ``findWithPrefix`` cumplen con lo solicitado.
+  #. La función ``findWithPrefix`` no sigue iterando una vez que se ha encontrado un elementos que satisface la condición de búsqueda.

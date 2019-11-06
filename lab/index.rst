@@ -13,6 +13,7 @@
    pr04_strategy
    pr05_abstractFactory
    pr06_observer
+   pr07_iterator
    pr08_objectPool
    pr09_domainDrivenDesign
    pr10_persistence
