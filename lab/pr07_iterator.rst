@@ -42,7 +42,7 @@ El alumno, para alcanzar los objetivos perseguidos, deberá completar las siguie
 :download:`Ejemplo Implementación Iterador Sobre Composite <src/pr07/IteradorComposite.zip>`
   Proyecto Visual Studio C# con una implementación de ejemplo del patrón Iterator sobre un Composite.
 
-.. tip:: Para saber si una cadena ``x`` contiene como prefijo otra cadena ``y``, en C# se puede utiliuzar el método ``StartsWith``.
+.. tip:: Para saber si una cadena ``x`` contiene como prefijo otra cadena ``y``, en C# se puede utilizar el método ``StartsWith``. 
 
 Criterios de Autoevaluación
 ============================
