@@ -41,7 +41,7 @@ Criterios de Evaluación
 ========================
 
   #. La colección o estructura donde el *pool* almacena los objetos precreados permite realizar de manera cómoda y eficiente tanto la extracción como la inserción de objetos en dicha estructura.
-  #. El *pool* posee un método para recueperar *objetos pesados*.
+  #. El *pool* posee un método para recuperar *objetos pesados*.
   #. El *pool* posee un método para devolver *objetos pesados*.
   #. Los métodos para devolver y retornar objetos son conformes con las políticas del *pool*.
   #. El *pool* es un *Singleton*.
@@ -77,4 +77,4 @@ Apéndice C: Trabajar con Maven
   #. Una vez creado el proyecto, incorporar las secciones ``build`` y ``dependencies`` de este fichero :download:`pom.xml <src/pr08/pom.xml>`.
   #. Una vez configurado el fichero ``pom.xml``, las dependencias con ``ConnectorJ`` se resolverán automáticamente.
   #. Para compilar el proyecto, se seleccionará el archivo ``pom.xml`` y, pulsando el botón derecho, se selecionará la opción ``Run As/Maven Build``.
-  #. Para ejecutar el proyecto, se seleccionará el archivo ``pom.xml`` y, pulsando el botón derecho, se selecionará la opción ``Run As/Run Configurations``. A continuación, una vez abierto el cuadro de especificiación de las configuraciones, se dará un nombre a la configuración y especificará como *Goals* ``exec:java``. Esta configuración sólo necesita ser creada una vez y a partir de ahí puede ser ejecutada tantas veces como haga falta.
+  #. Para ejecutar el proyecto, se seleccionará el archivo ``pom.xml`` y, pulsando el botón derecho, se deberá ejecutar la opción ``Run As/Run Configurations``. A continuación, una vez abierto el cuadro de especificación de las configuraciones, se dará un nombre a la configuración y se proporcionará como *Goals* ``exec:java``. Esta configuración sólo necesita ser creada una vez y a partir de ahí puede ser ejecutada tantas veces como haga falta.
