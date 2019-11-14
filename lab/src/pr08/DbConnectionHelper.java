@@ -7,27 +7,35 @@ import java.util.Properties;
 import java.util.TimeZone;
 
 public class DbConnectionHelper {
+
+	protected static String username = "sa";
+	protected static String password = "";
+	protected static String databaseUrl = "jdbc:h2:mem:polaflix";
 	
-	protected static String username = "polaflixStdUser";
-	protected static String password = "thePassword";
-	protected static String databaseUrl = "jdbc:mysql://127.0.0.1:3306/polaflix";
+	public static void setUsername(String username) {
+		DbConnectionHelper.username = username;
+	}
+
+	public static void setPassword(String password) {
+		DbConnectionHelper.password = password;
+	}
+
+	public static void setConnectionUrl(String connectionUrl) {
+		DbConnectionHelper.databaseUrl = connectionUrl;
+	}
 	
 	public static Connection createConnection() throws SQLException {
 		
-		Connection result = null;
-	
+		TimeZone timeZone = TimeZone.getTimeZone("GMT+1:00");
+		TimeZone.setDefault(timeZone);
+		
 		Properties connectionProps = new Properties();
-	    connectionProps.put("user", username);
-	    connectionProps.put("password", password);
-	    connectionProps.put("serverTimezone","UTC");
-	    
-	    result = DriverManager.getConnection(databaseUrl, connectionProps);
+		connectionProps.put("user", username);
+		connectionProps.put("password", password);
+		connectionProps.put("serverTimezone","UTC");
+		
+		return DriverManager.getConnection(databaseUrl, connectionProps); 
 
-		return result;
-		
-		
-		
-		
 	}
 
 }
