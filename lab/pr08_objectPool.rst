@@ -46,35 +46,66 @@ Criterios de Evaluación
   #. Los métodos para devolver y retornar objetos son conformes con las políticas del *pool*.
   #. El *pool* es un *Singleton*.
 
-Apéndice A: Material de Ayuda
-==============================
+Apéndice A: Conexión a Bases de Datos
+======================================
 
-Para evitar que el alumno pierda tiempo escribiendo el código necesario para crear una conexión de a Bases de Datos, se facilita la clase :download:`DbConnectionHelper.java <src/pr08/DbConnectionHelper.java>`. Esta clase contiene un único método estático, denominado ``createConnection()``, el cual devuelve una conexión a una base de datos concreta.
+Para la realización de la práctica, es necesario interactuar con un sistema gestor de bases de datos. Como Sistema Gestor de Bases de Datos se recomienda la utilización de `MySQL <https://www.mysql.com/>`_ o `H2 <https://www.h2database.com/html/main.html>`_.
 
-Para que dicha conexión pueda ser creada:
+*MySQL* es un sistema gestor de base de datos muy popular, ampliamente utilizado por aplicaciones reales en producción. No obstante, para poder ofrecer la robustez y eficiencia que se espera de un sistema gestor de bases de datos profesional, *MySQL* tiene que incorporar una serie de características que aumentan su complejidad, haciéndolo un sistema pesado durante las fases de desarrollo y prueba de un sistema software.
 
-  #. Debe existir un gestor de base de datos al cual conectarse;
-  #. Los datos de conexión a dicha base de datos deben haber sido incorporados a la clase ``DbConnectionHelper``.
-  #. El proyecto debe incorporar una serie de dependencias que proporcionen los *drivers* adecuados para realizar la conexión con las Bases de Datos. Para hacer más cómoda la gestión de las dependencias, se recomienda la utilización de Maven.
+Dado que durante las fases de desarrollo y pruebas no es necesaria la robustez y escalabilidad de un sistema gestor de bases de datos profesional, para estas fases sueles optarse por la utilización de sistemas ligeros como *H2*. *H2* una base de datos simple, que puede correr en memoria y, que no precisa ni de instalación ni de configuración. *H2* se instala habitualmente de manera transparente al desarrollador a partir de una dependencia Maven, lo que mejora enormemente la portabilidad del código fuente. Por tanto, recomendamos la utilización de *H2* durante el desarrollo de las prácticas de patrones de sistemas de información empresarial.
 
-Los siguientes apéndices indican como llevar a cabo dichas acciones
+Para evitar que el alumno pierda tiempo escribiendo el código Java necesario para crear una conexión de a bases de datos, se facilita la clase :download:`DbConnectionHelper.java <src/pr08/DbConnectionHelper.java>`. Esta clase contiene un único método estático, denominado ``createConnection()``, el cual devuelve una conexión a una base de datos concreta. Para poder utilizar esta clase, hay que especificar las propiedades ``username``, ``password`` y ``databaseUrl``. Estos parámetros variarán dependiendo de si estamos usando *MySQL* o *H2*.
 
-Apéndice B: Crear un Esquema de Base de Datos
-==============================================
+Apéndice B: Conexión a H2
+==========================
 
-Como Sistema Gestor de Bases de Datos se recomienda la utilización de `MySQL <https://www.mysql.com/>`_. Para configurar adecuadamente MySQL, se deberán llevar a cabo las siguientes acciones:
+Para conectarse a *H2* se utilizaran los siguientes parámetros de conexión:
 
-  #. Crear un nuevo *esquema* que se denomine ``polaflix``.
-  #. Añadir un nuevo usuario que se denomime ``polaflixStdUser``, con el password que se estime conveniente.
-  #. Otorgar al usuario permisos para gestionar el esquema ``polaflix``.
-  #. Averiguar la dirección y el puerto donde está accesible el servidor de *MySQL*.
+:username:    ``sa``
+:password:
+:databaseUrl: ``jdbc:h2:mem:polaflix``
 
-Apéndice C: Trabajar con Maven
+Además, para poder instalar *H2* deberá añadirse la siguiente dependencia al fichero ``pom.xml`` de Maven.
+
+.. code-block:: XML
+
+   <dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <version>1.4.196</version>
+   </dependency>
+
+Apéndice C: Conexión a MySQL
+=============================
+
+Para crear una conexión a *MySQL* tendremos que realizar las siguientes acciones:
+
+  #. Instalar *MySQL* en nuestra máquina.
+  #. Crear un nuevo *esquema de base de datos* que se denomine ``polaflix``.
+  #. Añadir un nuevo usuario a este esquema que se denomine ``polaflixStdUser``, con el *password* que se estime conveniente.
+  #. Otorgar al usuario los permisos necesarios para gestionar el esquema ``polaflix``.
+  #. Corrobar que la dirección y el puerto donde está accesible el servidor de *MySQL* son los estándares.
+  #. Añadir al proyecto Java desde el cual se espera acceder a la base de datos una dependencia con *ConnectorJ*, el driver que se utiliza para acceder a *MySQL* desde Java. El código para añadir esta dependencia al ``pom.xml`` se proporciona  a continuación.
+
+.. code-block:: XML
+
+   <dependency>
+     <groupId>mysql</groupId>
+     <artifactId>mysql-connector-java</artifactId>
+     <version>8.0.13</version>
+   </dependency>
+
+Tras realizar estas acciones, debería ser posible conectarse a *MySQL* utilizando los siguientes parámetros:
+
+:username:      ``polaflixStdUser``
+:password:      (el especificado por el alumno)
+:databaseUrl:   ``jdbc:mysql://127.0.0.1:3306/polaflix``
+
+Apéndice D: Trabajar con Maven
 ===============================
 
   #. Al crear el proyecto, seleccionar en *Eclipse* ``File/New/Project`` y a continuación ``Maven/Maven Project``.
+  #. A continuación, seleccionar ``Create a simple project (skip archetype selection)``.
   #. Especificar los datos requeridos para crear el proyecto. En caso de duda, preguntar al profesor.
-  #. Una vez creado el proyecto, incorporar las secciones ``build`` y ``dependencies`` de este fichero :download:`pom.xml <src/pr08/pom.xml>`.
-  #. Una vez configurado el fichero ``pom.xml``, las dependencias con ``ConnectorJ`` se resolverán automáticamente.
-  #. Para compilar el proyecto, se seleccionará el archivo ``pom.xml`` y, pulsando el botón derecho, se selecionará la opción ``Run As/Maven Build``.
-  #. Para ejecutar el proyecto, se seleccionará el archivo ``pom.xml`` y, pulsando el botón derecho, se deberá ejecutar la opción ``Run As/Run Configurations``. A continuación, una vez abierto el cuadro de especificación de las configuraciones, se dará un nombre a la configuración y se proporcionará como *Goals* ``exec:java``. Esta configuración sólo necesita ser creada una vez y a partir de ahí puede ser ejecutada tantas veces como haga falta.
+  #. Una vez creado el proyecto, se deberán añadir la dependencias necesarias, especificadas anteriormente, para trabajar con *H2* o *MySQL*.
