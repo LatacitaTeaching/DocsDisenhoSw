@@ -18,3 +18,4 @@
    pr09_domainDrivenDesign
    pr10_persistence
    pr11_service
+   misc_h2
