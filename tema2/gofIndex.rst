@@ -10,4 +10,5 @@
     gof/visitor
     gof/strategy
     gof/templateMethod
+    gof/abstractFactory
     gof/observer
