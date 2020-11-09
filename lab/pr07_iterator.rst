@@ -24,8 +24,6 @@ Los objetivos concretos de esta práctica son:
   #. Comprender el funcionamiento general del *patrón Iterator*.
   #. Ser capaz de construir iteradores para recorrer estructuras de clases creadas de acuerdo con el patrón Composite.
   #. Ser capaz de utilizar iteradores para recorrer estructuras compuestas.
-.. #. Comprender el funcionamiento general del *patrón State*.
-.. #. Ser capaz de aplicar el patrón State a la implementación de iteradores que necesiten re-correr estructuras compuestas como las generadas por el patrón Composite.
 
 Para alcanzar estos objetivos, el alumno deberá realizar las actividades que se describen a continuación.
 
@@ -42,7 +40,7 @@ El alumno, para alcanzar los objetivos perseguidos, deberá completar las siguie
 :download:`Ejemplo Implementación Iterador Sobre Composite <src/pr07/IteradorComposite.zip>`
   Proyecto Visual Studio C# con una implementación de ejemplo del patrón Iterator sobre un Composite.
 
-.. tip:: Para saber si una cadena ``x`` contiene como prefijo otra cadena ``y``, en C# se puede utilizar el método ``StartsWith``. 
+.. tip:: Para saber si una cadena ``x`` contiene como prefijo otra cadena ``y``, en C# se puede utilizar el método ``StartsWith``.
 
 Criterios de Autoevaluación
 ============================
@@ -52,3 +50,6 @@ Criterios de Autoevaluación
   #. Las funciones ``findHeavierThan``, ``findSizeInRange`` y ``findWithPrefix`` funcionan correctamente.
   #. Las funciones ``findHeavierThan``, ``findSizeInRange`` y ``findWithPrefix`` cumplen con lo solicitado.
   #. La función ``findWithPrefix`` no sigue iterando una vez que se ha encontrado un elementos que satisface la condición de búsqueda.
+
+.. Comprender el funcionamiento general del patrón State.
+.. Ser capaz de aplicar el patrón State a la implementación de iteradores que necesiten re-correr estructuras compuestas como las generadas por el patrón Composite.

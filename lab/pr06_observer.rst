@@ -61,8 +61,11 @@ El alumno, para alcanzar los objetivos perseguidos, deberá completar las siguie
 .. note:: Junto con el proyecto moodle se proporciona otro formulario,   implementado por la clase ``FileNameEditor``, con el objetivo de permitir que
  los nombres de los elementos del sistema de archivos visualizado por el *Explorador de Archivos Sparrow* se puedan visualizar cómodamente. Por limitaciones de este editor, se recomienda no dar el mismo nombre a dos elementos del sistema de archivos, aunque estén sitos en directorios diferentes, ya que dicha situación podría provocar comportamientos anómalos.
 
-:download:`Explorador de Archivos Sparrow <src/pr06/SparrowFileExplorer.zip>`
-  Proyecto Visual Studio C# conteniendo la definición de las interfaces gráficas que conformarán el *Explorador de Archivos Sparrow*.
+:download:`Explorador de Archivos Sparrow (.NET Framework) <src/pr06/SparrowFileExplorer(.NetFramework).zip>`
+  Proyecto Visual Studio C#, versión .NET Framework, conteniendo la definición de las interfaces gráficas que conformarán el *Explorador de Archivos Sparrow*.
+
+:download:`Explorador de Archivos Sparrow (.NET Core) <src/pr06/SparrowFileExplorer(.NetCore).zip>`
+  Proyecto Visual Studio C#, versión .NET Core, conteniendo la definición de las interfaces gráficas que conformarán el *Explorador de Archivos Sparrow*.
 
 Criterios de Autoevaluación
 ============================
