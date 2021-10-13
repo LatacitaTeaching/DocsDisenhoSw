@@ -46,4 +46,4 @@ La práctica se entregará a través de la plataforma *moodle* siguiendo las ins
 
 Para la evaluación de la práctica se prestará especial atención a que el alumno haya sido capaz de traducir correctamente la implementación realizada en C# del patrón *Composite* al lenguaje de programación que haya escogido, así como que haya sido capaz de utilizar con corrección las características propias de dicho lenguaje. También se valorará que la traducción de la práctica al nuevo lenguaje de programación esté completa y no falten elementos por trasladar.
 
-La traducción al lenguaje destino de la implementación del *Composite* tendrá un peso del 75% del global de esta práctica, mientras que la traducción de la *suite* de pruebas tendrá un peso del 25%. 
+La traducción al lenguaje destino de la implementación del *Composite* tendrá un peso del 75% del global de esta práctica, mientras que la traducción de la *suite* de pruebas tendrá un peso del 25%.
