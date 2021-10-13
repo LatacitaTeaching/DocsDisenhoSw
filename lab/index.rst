@@ -18,4 +18,5 @@
    pr09_domainDrivenDesign
    pr10_persistence
    pr11_service
+   torreDeBabel
    misc_h2
