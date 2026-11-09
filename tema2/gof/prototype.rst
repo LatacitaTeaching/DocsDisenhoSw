@@ -8,8 +8,8 @@ Problema a resolver
 
    Cómo conseguir que una determinada clase ``X`` pueda crear instancias concretas de una clase abstracta ``A`` sin necesidad de conocer la clase concreta ``C``  que hereda de ``A``, sin necesidad de que dicha clase ``C`` esté disponible en tiempo de compilación.
 
-Receta para aplicar el patrón (clase simple)
----------------------------------------------
+Receta para aplicar el patrón 
+------------------------------
 
     #. Identificar la clase abstracta ``A`` de la cual se desean crear instancias concretas.
     #. Añadir un método público ``clone() : A`` a dicha clase ``A``.
