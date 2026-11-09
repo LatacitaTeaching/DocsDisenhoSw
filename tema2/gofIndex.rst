@@ -12,4 +12,5 @@
     gof/templateMethod
     gof/abstractFactory
     gof/singleton
+    gof/prototype
     gof/observer
