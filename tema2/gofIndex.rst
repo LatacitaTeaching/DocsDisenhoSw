@@ -11,4 +11,5 @@
     gof/strategy
     gof/templateMethod
     gof/abstractFactory
+    gof/singleton
     gof/observer
