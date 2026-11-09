@@ -4,32 +4,12 @@ Patrón Composite
 Problema a resolver
 ---------------------
 
-.. todo:: Completar con ejemplo. Utilizar programa de dibujo o tablero de juego.
-
 .. admonition:: Problema
 
    Cómo tratar un conjunto de objetos heterogéneos, que pueden formar
    jerarquías de profundidad arbitraria, como objetos homogéneos indistingibles,
    tanto desde fuera de la jerarquía, es decir a nivel de cliente de la
    jerarquía, como internamente dentro de la jerarquía.
-
-Solución
----------
-
-Ejemplo Concreto
-*****************
-
-.. todo:: Completar una vez que esté listo el ejemplo concreto.
-
-Solución Abstracta
-*******************
-
-.. todo:: Completar
-
-Ventajas e Incovenientes
--------------------------
-
-.. todo:: Completar (OPC, Polimorfismo)
 
 Receta para aplicar el patrón
 --------------------------------

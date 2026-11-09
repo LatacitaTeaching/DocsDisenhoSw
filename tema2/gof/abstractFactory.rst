@@ -8,24 +8,6 @@ Problema a resolver
 
    Cómo independizar un conjunto de clases ``C`` que utilizan otra conjunto de clases abstractas (o interfaces) ``A`` de implementaciones concretas de dichas clases abstractas, asegurando además que todas las clases de ``C`` utilizan las mismas versiones concretas de ``A``.
 
-Solución
----------
-
-Ejemplo Concreto
-*****************
-
-.. todo:: Completar una vez que esté listo el ejemplo concreto.
-
-Solución Abstracta
-*******************
-
-.. todo:: Completar
-
-Ventajas e Incovenientes
--------------------------
-
-.. todo:: Completar (OPC, Polimorfismo)
-
 Receta para aplicar el patrón
 --------------------------------
 
